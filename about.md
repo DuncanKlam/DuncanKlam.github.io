@@ -4,27 +4,38 @@ title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Hey there! Thanks for the interest in me! It means a lot. Take a look at some quick aspects of my life!
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Life
 
-There are currently two themes built on Poole:
+I was born in Cleveland, Ohio (Go Buckeyes!)
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I lived most of my life in Holland, Michigan where I went to [West Ottawa High School](https://www.westottawa.net/).
+ At West Ottawa I participated in the [Robotics Club](http://www.team141.net/) (Go [WOBOT](http://www.team141.net/images/wobot%20logo_km2016-01.png?crc=3918792164)!!) as well as the series of broadcasting classes that output daily news shows for the school: [WOBN](http://www.wobnonline.com/)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+I currently [live](https://www.instagram.com/klemmchowdah/) in Muncie, Indiana where I attend [Ball State University](https://www.bsu.edu/).
+I am seeking to obtain a BA in Telecommunications with a focus in Video Production and a BS in Computer Science
 
-## Setup
 
-Some fun facts about the setup of this project include:
+## Work Experience
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+Something I pride myself on is that since I was able to pick up a shovel and help my grandpa dig holes, I have been employed and in the workforce (though that work experience is not reflected here)
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+* [Red Robin](https://www.redrobin.com/) - *Line Cook* - 4 years - 2016-2020  
+* [On The Border](https://www.ontheborder.com/) - *Line Cook* - 1 year - 2019-2020  
+* [City of Holland](https://www.cityofholland.com/) - *Video Production Intern* - 3 months - 2020.3-2020.6  
+* [McKinley Avenue Agency](https://mckinleyavenue.com/) - *Multimedia Director* - 3 years - 2019-Present  
+* [Lowe's](https://www.lowes.com/) - *Customer Service Associate* - 1 year - 2020-Present
+
+## Technical Skills
+
+The world of programming is constantly evolving and changing in new and interesting ways. There are a million and one ways to go about doing anything in a single language, let alone multiple languages. So, for me to say I have mastered any of these languages/softwares would be foolish. I can, however, confidently say I am fluent in some and am always learning others!
+
+Fluent in: [Java](https://www.java.com/), [Python](https://www.python.org/), [IntelliJ IDE](https://www.jetbrains.com/idea/), [GitHub Desktop](https://desktop.github.com/) (lol), [Scratch](https://scratch.mit.edu/)
+
+Learning: [Ruby](https://www.ruby-lang.org/), [Notepad++](https://notepad-plus-plus.org/), [Jekyll](https://jekyllrb.com/), [Git](https://git-scm.com/)/[Git Bash](https://git-scm.com/downloads/), [Jupyter](https://jupyter.org/), [Ubuntu](https://ubuntu.com/), [Linux](https://www.linux.org/), [Godot](https://godotengine.org/), [SASS](https://sass-lang.com/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+
+In my free time (which is not much) I enjoy learning how to code new and better things as well as browse [Reddit](https://www.reddit.com/user/klemmchowdah), and [pwn some noobs](https://www.reddit.com/r/apexlegends/comments/pjohex/sharpshooting_pre_bocek/) in [Apex Legends](https://www.ea.com/games/apex-legends)
 
 Thanks for reading!

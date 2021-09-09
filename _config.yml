@@ -9,20 +9,20 @@ permalink:        pretty
 plugins: [jekyll-paginate, jekyll-gist]
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            The Pineapple Rail
+tagline:          'A Klamworks site'
+description:      'Welcome to the Rail! We are on the express train to awesome things! Maintained by <a href="https://twitter.com/Klemmchowdah_II" target="_blank">@Klemmchowdah_II</a>.'
+url:              http://duncanklam.github.io
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Duncan Klemm'
+  url:            https://twitter.com/Klemmchowdah_II
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          v2.0.2
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/DuncanKlam/duncanklam.github.io
