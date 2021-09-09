@@ -11,7 +11,7 @@ plugins: [jekyll-paginate, jekyll-gist]
 # Setup
 title:            The Pineapple Rail
 tagline:          'A Klamworks site'
-description:      'Welcome to the Rail! We are on the express train to new and amazing things! Maintained by <a href="https://github.com/DuncanKlam" target="_blank">DuncanKlam</a>.'
+description:      'Welcome to the Rail! We are on the express train to new and amazing things!'
 url:              http://duncanklam.github.io
 baseurl:          /
 
