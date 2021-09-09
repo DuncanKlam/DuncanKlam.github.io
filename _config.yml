@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -11,7 +11,7 @@ plugins: [jekyll-paginate, jekyll-gist]
 # Setup
 title:            The Pineapple Rail
 tagline:          'A Klamworks site'
-description:      'Welcome to the Rail! We are on the express train to awesome things! Maintained by <a href="https://twitter.com/Klemmchowdah_II" target="_blank">@Klemmchowdah_II</a>.'
+description:      'Welcome to the Rail! We are on the express train to new and amazing things! Maintained by <a href="https://github.com/DuncanKlam" target="_blank">DuncanKlam</a>.'
 url:              http://duncanklam.github.io
 baseurl:          /
 
@@ -22,7 +22,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          v2.0.2
+version:          v1.0.0
 
 github:
   repo:           https://github.com/DuncanKlam/duncanklam.github.io
