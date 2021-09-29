@@ -1,11 +1,7 @@
 ---
-layout: page
+layout: post
 title: About
 ---
-
-<p class="message">
-  Hey there! Thanks for the interest in me! It means a lot. Take a look at some quick aspects of my life!
-</p>
 
 ## Life
 
@@ -16,7 +12,6 @@ I lived most of my life in Holland, Michigan where I went to [West Ottawa High S
 
 I currently [live](https://www.instagram.com/klemmchowdah/) in Muncie, Indiana where I attend [Ball State University](https://www.bsu.edu/).
 I am seeking to obtain a BA in Telecommunications with a focus in Video Production and a BS in Computer Science
-
 
 ## Work Experience
 
