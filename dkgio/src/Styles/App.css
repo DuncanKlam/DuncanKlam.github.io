@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  color: white;
+}
+
+.header-text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.pineapple-suite-header{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(40deg,rgba(0, 255, 0, 0.5), rgba(255, 255, 0, 0.5)), url("../../public/pineapplebg.jpg");
+}
+
+.pineapple-suite-header.small{
+  position: absolute;
+  left: 6.8%;
+  top: 18.5%;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.pineapple-suite-header.big{
+  font-size: 220px;
+  font-weight: 750;
+  margin: 0 0 150px 0;
+}
+
+.enter-site-button{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 0rem;
+}
+
+.enter-site-button:active{
+  scale: 0.95;
+}
