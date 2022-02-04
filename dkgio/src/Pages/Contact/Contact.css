@@ -1,0 +1,61 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 217, 0);
+    padding: 50px;
+    gap: 40px;
+}
+
+
+.contact-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid orange;
+    width: 60%;
+    height: 100%;
+    padding-left: 30px;
+}
+
+.contact-column-bigger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-spiel{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid orange;
+}
+
+.contact-me-row{
+    display: flex;
+    padding: 3px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
