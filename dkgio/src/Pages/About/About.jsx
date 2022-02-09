@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteHeader from '../../Components/Common/SiteHeader/SiteHeader';
+import SiteHeader from '../../Components/SiteHeader/SiteHeader';
 import './About.css'
 
 const About = () => {

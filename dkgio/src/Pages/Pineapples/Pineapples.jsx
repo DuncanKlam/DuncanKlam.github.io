@@ -1,6 +1,6 @@
 import React from 'react';
-import SiteHeader from '../../Components/Common/SiteHeader/SiteHeader';
-import { pineapples } from '../../Components/pineapples/pineapples';
+import SiteHeader from '../../Components/SiteHeader/SiteHeader.jsx';
+import { pineapples } from '../../Data/pineapples/pineapples';
 import './Pineapples.css'
 
 const Pineapples = () => {
@@ -13,7 +13,7 @@ const Pineapples = () => {
               <ul className='nav-menu-items'>
                 {pineapples.map((item, index) => {
                   return (
-                    <li key={index} className='pineapple'>
+                    <li key={index} className='pineapple-card'>
                       <a href={item.path}>
                         {item.icon}
                         {item.title}

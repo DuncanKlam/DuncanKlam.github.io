@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlinePhone, AiOutlineHome, AiOutlineMail } from 'react-icons/ai'
-import SiteHeader from '../../Components/Common/SiteHeader/SiteHeader';
+import SiteHeader from '../../Components/SiteHeader/SiteHeader';
 import './Contact.css'
 
 const Contact = () => {
