@@ -1,29 +1,31 @@
-import React from 'react';
+import { useEffect} from 'react';
 import SiteHeader from '../../Components/SiteHeader/SiteHeader.jsx';
 import { pineapples } from '../../Data/pineapples/pineapples';
+import PineappleCard from '../../Components/Pineapples/PineappleCard.jsx';
 import './Pineapples.css'
 
 const Pineapples = () => {
+
+  useEffect(() => {
+    pineapples.sort(compare)
+
+    function compare(a, b) {
+      if (a.year > b.year) {return -1;}
+      if (a.year < b.year) {return 1;}
+      return 0;
+    }
+  }, [])
+  
+
   return (
       <>
         <SiteHeader />
-        <div className='pineapples container'>
-          <>
-            <nav className='pineapples'>
-              <ul className='nav-menu-items'>
-                {pineapples.map((item, index) => {
-                  return (
-                    <li key={index} className='pineapple-card'>
-                      <a href={item.path}>
-                        {item.icon}
-                        {item.title}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </>
+        <div className='pineapples'>
+          {pineapples.map((item, index) => {
+            return (
+              <PineappleCard key={index} pineapple={item} />
+            );
+          })}
         </div>
       </>
   );

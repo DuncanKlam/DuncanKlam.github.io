@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import { useHistory } from "react-router";
 import { GiPineapple } from 'react-icons/gi';
+import { IconButton, Heading, Text } from '@chakra-ui/react'
+
 import './Splash.css';
 
 
@@ -24,26 +26,29 @@ const Splash = () => {
 
   return (
         <div className="Splash">
-            <header className="Splash-header" >
-                {/* <div className='splash-background'>
-                    <div class="x">
-                        <img class="y" src='http://pngimg.com/uploads/pineapple/pineapple_PNG2760.png'/>
-                        <img class="y" src='http://pngimg.com/uploads/pineapple/pineapple_PNG2760.png'/>
-                        <img class="y" src='http://pngimg.com/uploads/pineapple/pineapple_PNG2760.png'/>
-                    </div>
-                </div> */}
-                <div className='pineapple-suite-header outer-wrapper'>
-                    <div className='pineapple-suite-header small'>Welcome to the</div>
-                    <div className='pineapple-suite-header big'>PINEAPPLE LIBRARIES</div>
-                </div>
-                <svg width="0" height="0">
-                    <linearGradient id="green-gradient" x1="100%" y1="50%" x2="0%" y2="50%">
-                        <stop stopColor={pineappleFillColor} offset="0%" />
-                        <stop stopColor="#29fa11" offset="100%" />
-                    </linearGradient>
-                </svg>
-                <GiPineapple className='enter-site-button' size={140} style={{ fill: "url(#green-gradient)" }}  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}/>
-            </header>
+            <Heading as='h1' size={'4xl'} margin={15}>Welcome!</Heading>
+            <Text size='xl' marginBottom={5}>
+                This is Duncan Klemm's personal website.
+            </Text>
+            <IconButton 
+                aria-label='Enter website' 
+                onClick={handleClick}
+                h={90}
+                w={160}
+                bg='green.500'
+                color='yellow.300'
+                _hover={{
+                    bg: 'yellow.500',
+                    color: 'green.300'
+                }}
+                _active={{
+                    bg: 'yellow.500',
+                    color: 'gray.500'
+                }}
+                icon={<GiPineapple size={85} fill={'currentColor'}/>}
+            >
+                Enter
+            </IconButton>
         </div>
     );
 };

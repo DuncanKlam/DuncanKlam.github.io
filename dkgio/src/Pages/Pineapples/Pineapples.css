@@ -1,3 +1,18 @@
+:root {
+
+    --pineapple-gradient: linear-gradient(-45deg, orange , yellow, green, orange , yellow, green, orange , yellow, green, orange , yellow, green, orange , yellow, green);;
+    --rainbow-gradient: linear-gradient(-45deg, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet);
+    --rainbow-gradient-alt-1: linear-gradient(-45deg, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet);
+    --rainbow-gradient-alt-2: linear-gradient(-45deg, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow);
+    --rainbow-gradient-alt-3: linear-gradient(-45deg, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet,  orange , yellow, green, cyan);
+    --rainbow-gradient-alt-4: linear-gradient(-45deg, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet);
+    --rainbow-gradient-alt-5: linear-gradient(-45deg, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet, orange , yellow);
+    --gradient-backround-size: 400% 400%;
+    --gradient-animation: gradient 60s linear infinite;
+    --gradient-animation-alt-duration: gradient 75s linear infinite;
+    --gradient-transition-duration: 1s;
+}
+
 .pineapples {
     display: flex;
     flex-direction: column;
@@ -5,6 +20,17 @@
     justify-content: flex-start;
     color: rgb(255, 217, 0);
     height: 690px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.pineapples::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.outer-pineapple-card:active{
+    scale: .98;
 }
 
 .pineapple-card{
@@ -15,18 +41,68 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 18px; 
     border-radius: 5px;
-    box-shadow: inset 0 0 12px 12px white, inset 0 0 3px 2px white;
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-    /* box-shadow: 10px 5px 5px linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);;
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite; */
+    box-shadow: inset 0 0 12px 12px #202329, inset 0 0 3px 2px #202329;
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation);
+    transition-duration:var(--gradient-transition-duration);
 }
 
+.pineapple-card:hover{
+    transition-duration: 0.5s;
+    scale: 1.05;
+}
+
+.inner-pineapple-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #202329;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.inner-pineapple-card svg{
+    padding-left: 30px;
+}
+
+.inner-pineapple-card p{
+    padding-left: 30px;
+    font-size: 25px;
+}
+
+.pineapple-one{
+    background: var(--rainbow-gradient-alt-1);
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation);
+    transition-duration: var(--gradient-transition-duration);
+}
+.pineapple-two{
+    background: var(--rainbow-gradient-alt-2);
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation-alt-duration);
+    transition-duration: var(--gradient-transition-duration);
+}
+.pineapple-three{
+    background: var(--rainbow-gradient-alt-3);
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation);
+    transition-duration: var(--gradient-transition-duration);
+}
+.pineapple-four{
+    background: var(--rainbow-gradient-alt-4);
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation-alt-duration);
+    transition-duration: var(--gradient-transition-duration);
+}
+.pineapple-five{
+    background: var(--rainbow-gradient-alt-5);
+    background-size: var(--gradient-backround-size);
+    animation: var(--gradient-animation);
+    transition-duration: var(--gradient-transition-duration);
+}
 
 @keyframes gradient {
 	0% {
@@ -40,10 +116,3 @@
 	}
 }
 
-.pineapples ul{
-    list-style-type: none;
-}
-
-.nav-menu-items{
-    overflow: auto;
-}

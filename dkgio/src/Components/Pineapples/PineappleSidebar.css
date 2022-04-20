@@ -1,0 +1,77 @@
+.pineapples-sidebar{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.pineapples-sidebar::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.sidebar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.pineapple-sidebar-card{
+    margin: 15px 0px;
+    width: 98%;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pineapple-sidebar-card:hover{
+    width: 107%;
+    transition: .5s;
+}
+
+.scs-one{
+    border-left: 4px solid var(--header-color-one);
+    border-right: 1px solid var(--header-color-one);
+}
+
+.scs-two{
+    border-left: 4px solid var(--header-color-two);
+    border-right: 1px solid var(--header-color-two);
+}
+
+.scs-three{
+    border-left: 4px solid var(--header-color-three);
+    border-right: 1px solid var(--header-color-three);
+}
+
+.scs-four{
+    border-left: 4px solid var(--header-color-four);
+    border-right: 1px solid var(--header-color-four);
+}
+
+.scs-five{
+    border-left: 4px solid var(--header-color-five);
+    border-right: 1px solid var(--header-color-five);
+}
+
+.scs-six{
+    border-left: 4px solid var(--header-color-six);
+    border-right: 1px solid var(--header-color-six);
+}
+
+.sidebar-card-text-container{
+    text-align: center;
+    width: 190px;
+    color: white;  
+    cursor: default;
+}

@@ -1,5 +1,10 @@
 .Splash {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
 }
 
 .Splash-header {
@@ -16,21 +21,21 @@
 }
 
 .pineapple-suite-header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: default;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  -webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(45deg,rgba(0, 255, 0, 0.3), rgba(255, 255, 0, 0.631)), url('../../../public/homepagetextpineapplebg.jpg');
-	color: transparent;
+  /* -webkit-background-clip: text; */
+	/* background-clip: text; */
+	/* background-image: linear-gradient(45deg,rgba(0, 255, 0, 0.3), rgba(255, 255, 0, 0.631)), url('../../../public/homepagetextpineapplebg.jpg'); */
+	/* color: transparent; */
   animation-duration: 2s;
   animation-name: fadein;
+  left: 6.3%;
+  font-size: 180px;
+  font-weight: 750;
+  line-height: 140px;
+  padding: 2px;
   z-index: 2;
 }
 
@@ -62,21 +67,6 @@
   }
 }
 
-.pineapple-suite-header.small{
-  left: 6.8%;
-  font-size: 50px;
-  font-weight: 750;
-  line-height: 40px;
-}
-
-.pineapple-suite-header.big{
-  left: 6.3%;
-  font-size: 180px;
-  font-weight: 750;
-  line-height: 140px;
-  padding: 2px;
-}
-
 .enter-site-button{
   animation-duration: 2s;
   animation-name: fadein;
@@ -85,36 +75,4 @@
 .enter-site-button:active{
   scale: 0.95;
   z-index: 2;
-}
-
-.splash-background {
-  position: absolute;
-  z-index: 1;
-  opacity: 5%;
-  width: 500px;
-  height: 500px;
-  left: 0px;
-  top: 0px;
-}
-
-.x {
-  animation: x 15s linear infinite alternate;
-}
-
-.y {
-  animation: y 12s linear infinite alternate;
-  width: 35px;
-  height: 70px;
-}
-
-@keyframes x {
-  100% {
-    transform: translateX( 1500px);
-  }
-}
-
-@keyframes y {
-  100% {
-    transform: translateY( 720px );
-  }
 }

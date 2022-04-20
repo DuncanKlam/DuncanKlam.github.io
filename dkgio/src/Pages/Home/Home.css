@@ -5,3 +5,8 @@
     justify-content: flex-start;
     color: rgb(255, 217, 0);
 }
+
+
+.home h1{
+    font-size: 120px;
+}

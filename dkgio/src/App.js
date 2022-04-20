@@ -6,6 +6,7 @@ import About from "./Pages/About/About.jsx";
 import Donate from "./Pages/Donate/Donate.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
 import Download from "./Pages/Download/Download.jsx";
+import BasicPineapplePage from "./Components/Pineapples/BasicPineapplePage.jsx";
 
 
 function App() {
@@ -20,6 +21,12 @@ function App() {
         <Route path="/donate" exact><Donate /></Route>
         <Route path="/contact" exact><Contact /></Route>
         <Route path="/download" exact><Download /></Route>
+        <Route path="/pineapples/todoapp" exact><BasicPineapplePage /></Route>
+        <Route path="/pineapples/workoutgenerator" exact><BasicPineapplePage /></Route>
+        <Route path="/pineapples/basiccalculator" exact><BasicPineapplePage /></Route>
+        <Route path="/pineapples/quaternarycalculator" exact><BasicPineapplePage /></Route>
+        <Route path="/pineapples/dbhconverter" exact><BasicPineapplePage /></Route>
+        <Route path="/pineapples/wikirevisionviewer" exact><BasicPineapplePage /></Route>
       </Switch>
     </BrowserRouter>
   );

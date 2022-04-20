@@ -21,7 +21,7 @@ const SiteHeader = () => {
               </linearGradient>
             </svg>
             <div className='logo-full' onClick={()=>{handleClick('/')}}>
-              <GiPineapple size={140} style={{ fill: "url(#green-gradient)" }} />
+              <GiPineapple size={100} style={{ fill: "url(#green-gradient)" }} />
               <div className='logo-text'> 
                 <h1>TPL</h1>
               </div>

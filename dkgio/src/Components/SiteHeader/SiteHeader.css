@@ -66,36 +66,36 @@
 }
 
 .header-option.one{
-    border-top: 1px solid blue;
-    border-bottom: 5px solid blue;
-    color: blue;
+    border-top: 1px solid var(--header-color-one);
+    border-bottom: 5px solid var(--header-color-one);
+    color: var(--header-color-one);
 }
 
 .header-option.two{
-    border-top: 1px solid greenyellow;
-    border-bottom: 5px solid greenyellow;
-    color: greenyellow;
+    border-top: 1px solid var(--header-color-two);
+    border-bottom: 5px solid var(--header-color-two);
+    color: var(--header-color-two);
 }
 
 .header-option.three{
-    border-top: 1px solid yellow;
-    border-bottom: 5px solid yellow;
-    color: yellow;
+    border-top: 1px solid var(--header-color-three);
+    border-bottom: 5px solid var(--header-color-three);
+    color: var(--header-color-three);
 }
 
 .header-option.four{
-    border-top: 1px solid orange;
-    border-bottom: 5px solid orange;
-    color: orange;
+    border-top: 1px solid var(--header-color-four);
+    border-bottom: 5px solid var(--header-color-four);
+    color: var(--header-color-four);
 }
 
 .header-option.five{
-    border-top: 1px solid red;
-    border-bottom: 5px solid red;
-    color: red;
+    border-top: 1px solid var(--header-color-five);
+    border-bottom: 5px solid var(--header-color-five);
+    color: var(--header-color-five);
 }
 .header-option.six{
-    border-top: 1px solid rgb(160, 27, 160);
-    border-bottom: 5px solid rgb(160, 27, 160);
-    color: rgb(160, 27, 160);
+    border-top: 1px solid var(--header-color-six);
+    border-bottom: 5px solid var(--header-color-six);
+    color: var(--header-color-six);
 }

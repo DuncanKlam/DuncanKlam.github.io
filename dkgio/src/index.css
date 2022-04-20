@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  background-color: #202329;
 }
 
 code {
@@ -13,7 +14,12 @@ code {
     monospace;
 }
 
-.container {
-  background-color: #202329;
-  min-height: 65vh;
+
+:root{
+  --header-color-one: blue;
+  --header-color-two: lawngreen;
+  --header-color-three: yellow;
+  --header-color-four: rgb(255, 132, 0);
+  --header-color-five: red;
+  --header-color-six: rgb(160, 27, 160);
 }
