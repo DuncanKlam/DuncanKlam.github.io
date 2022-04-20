@@ -4,6 +4,7 @@ import { GiPineapple } from 'react-icons/gi';
 import { IconButton, Heading, Text } from '@chakra-ui/react'
 
 import './Splash.css';
+import { ColorModeSwitcher } from '../../Components/ColorModeSwitcher';
 
 
 const Splash = () => {
@@ -26,6 +27,7 @@ const Splash = () => {
 
   return (
         <div className="Splash">
+            <ColorModeSwitcher />
             <Heading as='h1' size={'4xl'} margin={15}>Welcome!</Heading>
             <Text size='xl' marginBottom={5}>
                 This is Duncan Klemm's personal website.

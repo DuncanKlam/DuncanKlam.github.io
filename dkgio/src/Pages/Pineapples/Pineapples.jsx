@@ -1,11 +1,10 @@
-import { useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import SiteHeader from '../../Components/SiteHeader/SiteHeader.jsx';
 import { pineapples } from '../../Data/pineapples/pineapples';
 import PineappleCard from '../../Components/Pineapples/PineappleCard.jsx';
 import './Pineapples.css'
 
 const Pineapples = () => {
-
   useEffect(() => {
     pineapples.sort(compare)
 
@@ -15,7 +14,6 @@ const Pineapples = () => {
       return 0;
     }
   }, [])
-  
 
   return (
       <>
