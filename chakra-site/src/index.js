@@ -1,9 +1,9 @@
-import { ColorModeScript } from '@chakra-ui/react';
-import React, { StrictMode } from 'react';
+import './Styles/index.css'
 import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import * as serviceWorker from './serviceWorker';
+import { StrictMode } from 'react';
+import { ColorModeScript } from '@chakra-ui/react';
+import App from './Pages/App';
+import * as serviceWorker from './HOC/serviceWorker';
 
 ReactDOM.render(
   <StrictMode>
@@ -18,7 +18,3 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 serviceWorker.unregister();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
