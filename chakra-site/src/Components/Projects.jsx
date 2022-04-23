@@ -1,12 +1,14 @@
 import '../Styles/projects.css'
-import { Flex, Heading, HStack, Text, Link, useColorMode} from '@chakra-ui/react';
+import { Flex, Heading, HStack, Text, Link, useColorMode, Circle, AlertDialog, Button, AlertDialogBody, AlertDialogFooter, AlertDialogHeader, AlertDialogContent, AlertDialogOverlay, useDisclosure, Switch} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
+import { FiChevronRight } from 'react-icons/fi'
 import { projectsInfo, badgeOptions } from '../Documents/projectsInfo';
 import Select from 'react-select';
 
-const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, color, hasOtherLink, otherLink}) => {
-
+const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, color, hasDescLink, descLink, hasInteractive, interactiveLink}) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex flexDirection={'column'} marginBottom='30px' align={'flex-start'} >
       <HStack>
@@ -20,11 +22,46 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
       </Text>
       <Flex gap={5}>
         <Text fontSize={'xl'}>
-          {desc}{hasOtherLink ? <Link href={otherLink.link} isExternal fontSize={'lg'} color={color === 'light' ? 'blue.600' : 'blue.400'}>{otherLink.name}</Link> : ''}
+          {desc}{hasDescLink ? <Link href={descLink.link} isExternal fontSize={'lg'} color={color === 'light' ? 'blue.600' : 'blue.400'}>{descLink.name}</Link> : ''}
         </Text>
-       {hasRepo && <Link href={repoLink} isExternal display={'flex'} gap={2} justify='center' fontSize={'sm'} color={color === 'light' ? 'blue.600' : 'blue.400'}>
+        {hasRepo && <Link href={repoLink} isExternal display={'flex'} gap={2} fontSize={'sm'} color={color === 'light' ? 'blue.600' : 'blue.400'}>
           Github Repo <FaGithub mx='2px' />
         </Link>}
+        {hasInteractive && <>
+          <Link onClick={onOpen} isExternal display={'flex'} gap={2} justify='flex-end' fontSize={'sm'} color={color === 'light' ? 'blue.600' : 'blue.400'}>
+            Try it out
+            <Circle size='20px' outline={'1px solid currentColor'}>
+              <FiChevronRight mx='2px' />
+            </Circle>
+          </Link>
+          <AlertDialog
+            isOpen={isOpen}
+            onClose={onClose}
+          >
+            <AlertDialogOverlay>
+              <AlertDialogContent>
+                <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                  External Link
+                </AlertDialogHeader>
+    
+                <AlertDialogBody>
+                  You may be faced with a blank screen for a minute, allow for extended loading time.
+                </AlertDialogBody>
+    
+                <AlertDialogFooter>
+                  <Button onClick={onClose}>
+                    Cancel
+                  </Button>
+                  <Link href={interactiveLink} isExternal>
+                    <Button href={interactiveLink} colorScheme='blue' ml={3} onClick={onClose}>
+                      Interactive Sandbox <ExternalLinkIcon mx='2px' />
+                    </Button>
+                  </Link>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialogOverlay>
+          </AlertDialog> 
+        </> }
       </Flex>
     </Flex>
   )
@@ -35,16 +72,23 @@ const Projects = () => {
 
   const [filteredProjects, setFilteredProjects] = useState(projectsInfo)
   const [projectsFilter, setProjectsFilter] = useState([])
+  const [intersectionSearch, setIntersectionSearch] = useState(false)
 
   useEffect(() => {
     if(projectsFilter.length === 0){
       setFilteredProjects(projectsInfo)
     } else {
-      setFilteredProjects(projectsInfo.filter((project) => 
-        projectsFilter.some(({ badge }) => project.badgeArray.includes(badge))
+      if(intersectionSearch){
+        setFilteredProjects(projectsInfo.filter((project) => 
+        projectsFilter.every(({ badge }) => project.badgeArray.includes(badge))
       ))
+      } else {
+        setFilteredProjects(projectsInfo.filter((project) => 
+          projectsFilter.some(({ badge }) => project.badgeArray.includes(badge))
+        ))
+      }
     }
-  }, [projectsFilter])
+  }, [projectsFilter, intersectionSearch])
 
   const formatOptionLabel = ({ label, colorMain, colorAlt }) => {
 
@@ -63,16 +107,14 @@ const Projects = () => {
 
   return (
     <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'130%'} marginLeft={10} id='projects'>
-        <Flex marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={10}>
+        <Flex marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={5}>
           <Heading as='h1' size='3xl'>
               Projects
           </Heading>
           <Select options={badgeOptions} isMulti formatOptionLabel={formatOptionLabel} 
           className='projects-filter' onChange={( value ) => {setProjectsFilter(value)}}
           placeholder="Filter projects by tag..." 
-          theme={theme => {
-            console.log(theme)
-            return ({
+          theme={theme => ({
               ...theme,
               borderRadius: 20,
               colors: {
@@ -83,9 +125,12 @@ const Projects = () => {
                 danger: `${ colorMode === 'light' ? '#ff0000' : '#ff6666'}`,
                 dangerLight:  `${ colorMode === 'light' ? 'white' : '#0b0d22'}`
               },
-            })
-          }}
+            })}
           />
+          <Switch size='lg' colorScheme='purple' onChange={(e) => setIntersectionSearch(e.target.checked)}/>
+          <Text fontSize={'sm'}>
+            Intersection Search
+          </Text>
         </Flex>
         {filteredProjects.map( (props, index) => {
           return (

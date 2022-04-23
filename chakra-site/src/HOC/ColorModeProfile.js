@@ -11,7 +11,6 @@ export const ColorModeProfile = props => {
   return (
     <Tooltip label={tooltipText} placement={'right'}>
       <Image
-        colorScheme={text}
         size="md"
         fontSize="lg"
         aria-label={`Duncan Klemm in ${text} mode`}

@@ -4,11 +4,20 @@ import { StrictMode } from 'react';
 import { ColorModeScript } from '@chakra-ui/react';
 import App from './Pages/App';
 import * as serviceWorker from './HOC/serviceWorker';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 ReactDOM.render(
   <StrictMode>
     <ColorModeScript />
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
   document.getElementById('root')
 );

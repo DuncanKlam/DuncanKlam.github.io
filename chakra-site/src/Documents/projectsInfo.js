@@ -3,7 +3,7 @@ import { React } from 'react';
 
 const shell = <Badge colorScheme='black' key='shl'>Shell</Badge>
 const markdown = <Badge colorScheme={'gray'} key='md' >Markdown</Badge>
-//red theme available
+//red theme available before nedding to create custom themes
 const java = <Badge colorScheme='orange' key='jav'>Java</Badge>
 const ongoing = <Badge colorScheme={'yellow'} key='ong'>Ongoing</Badge>
 const chakra = <Badge colorScheme='green' key='cha'>Chakra</Badge>
@@ -20,7 +20,8 @@ export const projectsInfo = [
         "date": 'September 2021 - present',
         "desc": "The website you're currently visiting. How do you like it? Please leave feedback.",
         "repoLink": 'https://github.com/DuncanKlam/DuncanKlam.github.io',
-        "hasOtherLink": false,
+        "hasRepo": true,
+        "hasDescLink": false,
     },
     {
         "title": "Apex Legends Stats Dashboard",
@@ -28,7 +29,10 @@ export const projectsInfo = [
         "date": 'April 2022',
         "desc": "A dashboard that displays data based on the trackers that are equipped to your current legend.",
         "repoLink": 'https://github.com/DuncanKlam/Apex-Legends-Stats-Dashboard',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
+        'hasInteractive' : true,
+        'interactiveLink' : 'https://koif2f.csb.app/'
     },
     {
         "title": "Covid Data Scraper",
@@ -36,7 +40,8 @@ export const projectsInfo = [
         "date": 'April 2022 - present',
         "desc": "A lightweight python script that displays basic covid data for any given state or county.",
         "repoLink": 'https://github.com/DuncanKlam/CovidDataScraper',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
     },
     {
         "title": "Full Court Analytics - Player Site",
@@ -44,8 +49,8 @@ export const projectsInfo = [
         "date": 'September 2021 - April 2022',
         "desc": "The individual player version of ",
         "hasRepo": false,
-        "hasOtherLink": true,
-        "otherLink": {
+        "hasDescLink": true,
+        "descLink": {
             link: 'https://fullcourtanalytics.com/',
             name: 'fullcourtanalytics.com'
         }
@@ -56,7 +61,8 @@ export const projectsInfo = [
         "date": 'September 2021 - April 2022',
         "desc": "The side documentation for the Full Court Analytics Player Site.",
         "repoLink": 'https://github.com/DuncanKlam/FullCourtAnalytics',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
     },
     {
         "title": "Quaternary Calculator",
@@ -64,7 +70,8 @@ export const projectsInfo = [
         "date": 'September 2021',
         "desc": "A basic calculator that operates in base 4 with the ability to switch to base 10.",
         "repoLink": 'https://github.com/DuncanKlam/QuaternaryCalculator',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
     },
     {
         "title": "Workout Generator",
@@ -72,7 +79,8 @@ export const projectsInfo = [
         "date": 'April 2020',
         "desc": "Generate a random workout according to user specifications with this small application.",
         "repoLink": 'https://github.com/DuncanKlam/Workout-Generator',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
     },
     {
         "title": "To-Do List Application",
@@ -80,7 +88,8 @@ export const projectsInfo = [
         "date": 'April 2020',
         "desc": "A lightweight application that allows you to connect to a remote server to push and pull basic to-do items.",
         "repoLink": 'https://github.com/DuncanKlam/ToDoListApplication',
-        "hasOtherLink": false,
+        "hasDescLink": false,
+        "hasRepo": true,
     },
 ]
 
