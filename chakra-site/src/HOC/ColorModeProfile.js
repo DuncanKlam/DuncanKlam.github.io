@@ -1,23 +1,28 @@
 import React from 'react';
-import { useColorModeValue, Image } from '@chakra-ui/react';
+import { useColorModeValue, Image, Tooltip } from '@chakra-ui/react';
 import ProfileLight from '../Documents/profile-light.jpg'
 import ProfileDark from '../Documents/profile-dark.jpg'
 
 export const ColorModeProfile = props => {
-  const text = useColorModeValue('dark', 'light');
+  const text = useColorModeValue('light', 'dark');
   const profileSource = useColorModeValue(ProfileLight, ProfileDark)
+  const tooltipText = useColorModeValue('Duncan', 'the cooler Duncan')
 
   return (
-    <Image
-      size="md"
-      fontSize="lg"
-      aria-label={`Duncan Klemm in ${text} mode`}
-      color="current"
-      borderRadius='full'
-      boxSize='145px'
-      src={profileSource}
-      alt='Duncan Klemm'
-      {...props}
-    />
+    <Tooltip label={tooltipText} placement={'right'}>
+      <Image
+        colorScheme={text}
+        size="md"
+        fontSize="lg"
+        aria-label={`Duncan Klemm in ${text} mode`}
+        color="current"
+        borderRadius='full'
+        boxSize='145px'
+        src={profileSource}
+        alt='Duncan Klemm'
+        {...props}
+      />
+    </Tooltip>
+    
   );
 };

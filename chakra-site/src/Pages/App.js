@@ -6,7 +6,7 @@ import {
   Circle,
   theme,
   Flex,
-  Divider} from '@chakra-ui/react';
+  Divider,} from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../HOC/ColorModeSwitcher';
 import { AiOutlineFilePdf } from 'react-icons/ai'
 import About from '../Components/About';
@@ -24,7 +24,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Flex textAlign="center" overflow={'hidden'}>
         <Flex w={300} h={'100vh'} bgColor={'blackAlpha.500'} flexDirection={'column'} justify={'center'} align={'center'} gap={10}>
-          <Circle size='160px' bg={'blackAlpha.100'} color='white'>
+          <Circle size='160px' bg={'blackAlpha.100'}>
             <ColorModeProfile />
           </Circle>
           <VStack>

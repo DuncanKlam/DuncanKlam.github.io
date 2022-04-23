@@ -13,7 +13,7 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
         <Heading as='h3' size='xl'>
           {title}
         </Heading>
-        {badgeArray}
+        {badgeArray.slice(0,4)}
       </HStack>
       <Text fontStyle={'italic'} fontSize='sm'>
         {date}
@@ -70,16 +70,21 @@ const Projects = () => {
           <Select options={badgeOptions} isMulti formatOptionLabel={formatOptionLabel} 
           className='projects-filter' onChange={( value ) => {setProjectsFilter(value)}}
           placeholder="Filter projects by tag..." 
-          theme={theme => ({
-            ...theme,
-            borderRadius: 20,
-            colors: {
-              ...theme.colors,
-              neutral0: `${ colorMode === 'light' ? 'white' : '#0b0d22'}`,
-              neutral10: `${ colorMode === 'light' ? 'fillColor' : 'fillColor'}`,
-              primary25: `${ colorMode === 'light' ? '#dfdfdf' : '#757575'}`,
-            },
-          })}
+          theme={theme => {
+            console.log(theme)
+            return ({
+              ...theme,
+              borderRadius: 20,
+              colors: {
+                ...theme.colors,
+                neutral0: `${ colorMode === 'light' ? 'white' : '#0b0d22'}`,
+                neutral10: `${ colorMode === 'light' ? 'fillColor' : 'fillColor'}`,
+                primary25: `${ colorMode === 'light' ? '#dfdfdf' : '#757575'}`,
+                danger: `${ colorMode === 'light' ? '#ff0000' : '#ff6666'}`,
+                dangerLight:  `${ colorMode === 'light' ? 'white' : '#0b0d22'}`
+              },
+            })
+          }}
           />
         </Flex>
         {filteredProjects.map( (props, index) => {
