@@ -106,8 +106,8 @@ const Projects = () => {
 
 
   return (
-    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'130%'} marginLeft={10} id='projects'>
-        <Flex marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={5}>
+    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'130%'} marginLeft={10} >
+        <Flex id='projects' marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={5}>
           <Heading as='h1' size='3xl'>
               Projects
           </Heading>

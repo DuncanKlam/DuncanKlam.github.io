@@ -28,18 +28,24 @@ const Learning = () => {
             Currently Learning
         </Heading>
         <LearningItem title={'React.js'} href={'https://reactjs.org/'} desc="React is a free and open-source front-end JavaScript library for building user interfaces 
-                                                                            based on UI components. It is maintained by Meta and a community of individual developers 
-                                                                            and companies. This library is incredibly fun to learn and use. It makes web development
-                                                                            so incredibly easy. Javascript is also just the s*** in general."/>
+                                                                            based on UI components. It is maintained by Meta (unfortunate) and a community of individual 
+                                                                            developers and companies. This library is incredibly fun to learn and use. It makes web 
+                                                                            development so incredibly easy. Javascript is also just the s*** in general. Async/await? 
+                                                                            Are you kidding me??  *chef's kiss*  Perfection."/>
         <LearningItem title={'Node.js'} href={'https://nodejs.org/en/'} desc='Node.js is an open-source, cross-platform, back-end JavaScript runtime environment 
                                                                               that runs on the V8 engine and executes JavaScript code outside a web browser. My
                                                                               goal with learning Node is to ultimately build a lean, mean, request processing 
-                                                                              machine (program) and host my own server. Alternatively, I will open an Inmotion
+                                                                              machine and host my own server. Alternatively, I will open an Inmotion
                                                                               account.' />
         <LearningItem title={'Go'} href={'https://go.dev/'} desc="Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, 
                                                                   Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage 
                                                                   collection, structural typing, and CSP-style concurrency. I am excited to be learning Go because 
-                                                                  I feel it will be a slightly more forgiving environemnt in to advance my skills with pointers."/>
+                                                                  I feel it will be a slightly more forgiving environemnt to advance my skills with pointers."/>
+        <LearningItem title={'Prolog'} href={'https://www.swi-prolog.org/'} desc="Prolog is a logic programming language. It has important role in artificial 
+                                                                                  intelligence. Unlike many other programming languages, Prolog is intended 
+                                                                                  primarily as a declarative programming language. I am excited to learn Prolog
+                                                                                  because it is simply an interesting language to learn. Perhaps I will get crazy 
+                                                                                  and build an AI to accomplish a task, who knows."/>
     </Flex>
   )
 }

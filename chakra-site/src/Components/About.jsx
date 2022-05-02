@@ -9,7 +9,7 @@ import {
     PopoverContent,
     PopoverTrigger,
     PopoverHeader,
-    PopoverBody
+    PopoverBody,
   } from '@chakra-ui/react';
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram, FaLocationArrow} from 'react-icons/fa'

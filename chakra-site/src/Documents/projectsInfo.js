@@ -1,5 +1,4 @@
 import { Badge } from '@chakra-ui/react';
-import { React } from 'react';
 
 const shell = <Badge colorScheme='black' key='shl'>Shell</Badge>
 const markdown = <Badge colorScheme={'gray'} key='md' >Markdown</Badge>

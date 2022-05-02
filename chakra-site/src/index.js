@@ -12,7 +12,7 @@ import {
 
 ReactDOM.render(
   <StrictMode>
-    <ColorModeScript />
+    <ColorModeScript initialColorMode={'light'} />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />

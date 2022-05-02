@@ -1,36 +1,83 @@
-import { Flex, Heading, Text, SimpleGrid, Circle, useColorModeValue, useColorMode} from '@chakra-ui/react';
-import { FiMail, FiCoffee, FiPaperclip, FiBluetooth, FiEye, FiCopy, FiBatteryCharging, FiGrid, FiGift, FiZap} from 'react-icons/fi'
-import { FaReact, FaJava, FaPython } from 'react-icons/fa'
-import { DiJavascript1 } from 'react-icons/di'
-import { GiSpiderWeb, GiBigGear } from 'react-icons/gi'
+import { Flex, Heading, Text, SimpleGrid, Circle, useColorModeValue, HStack, Tooltip,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button} from '@chakra-ui/react';
+import { GeneralSkills, TechnicalSkills } from '../Documents/skillsInfo';
 
-const SkillItem = ({ icon, skill, bgColor = 'blackAlpha.100'}) => {
+const Dots = ({ number }) => {
+
+  const words = ['Novice', 'Advanced Beginner', 'Knowledgable', 'Proficient', 'Expert']
+  const glowColor = useColorModeValue('#A3A4B3','#6D6E80');
+  const solidCirc = <Circle size={'10px'} bg={'currentColor'} /> 
+  const emptyCirc = <Circle size={'10px'} border={'1px solid currentColor'}/>
+  const Filled = ({children}) => {return <Tooltip label={words[number-1]}><Flex gap={2} _hover={{'box-shadow': '0px 0px 5px 5px ' + glowColor + ';', bg : glowColor, borderRadius: 5 }} >{children}</Flex></Tooltip> }
+  
+  switch (number) {
+    case 3:
+      return(<><Filled>{solidCirc}{solidCirc}{solidCirc}</Filled>{emptyCirc}{emptyCirc}</>)
+    case 4:
+      return(<><Filled>{solidCirc}{solidCirc}{solidCirc}{solidCirc}</Filled>{emptyCirc}</>)
+    case 5:
+      return(<><Filled>{solidCirc}{solidCirc}{solidCirc}{solidCirc}{solidCirc}</Filled></>)
+    default:
+      break;
+  }
+}
+
+const SkillItem = ({ icon, skill, bgColor = 'blackAlpha.100', proficiency = 0, explanation = []}) => {
 
   const textColor = useColorModeValue('black', 'white')
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Flex height='80px' w={'340px'} align={'center'} outline={'1px solid gray'} padding={8} borderRadius={10}>
-      <Circle size='60px' bg={bgColor} marginRight={5}>
-        {icon}
-      </Circle>
-      <Text fontSize={'lg'} color={textColor}>
-        {skill}
-      </Text>
-    </Flex>
+    <>
+      <Flex height='80px' w={'340px'} align={'center'} outline={'1px solid gray'} padding={8} borderRadius={10} onClick={onOpen}>
+        <Circle size='60px' bg={bgColor} marginRight={5}>
+          {icon}
+        </Circle>
+        <Flex direction={'column'} align={'flex-start'} gap={3}>
+          <Text fontSize={'lg'} color={textColor}>
+            {skill}
+          </Text>
+          <HStack>
+            <Dots number={proficiency} />
+          </HStack>
+        </Flex>
+      </Flex>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader><Flex align={'center'} gap={2}>{icon}{skill}</Flex></ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            {explanation.map(expString => (
+              <Text>{expString}</Text>
+            ))}
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   )
 }
 
 
 const Skills = () => {
 
-  const { colorMode } = useColorMode()
-
-  const colorSwitch = (light, dark) => {
-    return colorMode === 'light' ? light : dark
-  }
-
   return (
-    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'100%'} marginLeft={10} id='skills'>
+    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'105%'} w={'95%'} marginLeft={10} id='skills'>
         <Heading as='h1' size='3xl'>
           Skills
         </Heading>
@@ -38,27 +85,13 @@ const Skills = () => {
           General Skills
         </Heading>
         <SimpleGrid columns={[2, null, 4]} spacing='40px'>
-          <SkillItem skill={'Drinking coffee'} icon={<FiCoffee size={30}/>}/>
-          <SkillItem skill={'Responding to emails'} icon={<FiMail size={30}/>}/>
-          <SkillItem skill={'Paper-clipping'} icon={<FiPaperclip size={30}/>}/>
-          <SkillItem skill={'Connecting to Bluetooth'} icon={<FiBluetooth size={30}/>}/>
-          <SkillItem skill={'Looking'} icon={< FiEye size={30}/>}/>
-          <SkillItem skill={'Ctrl+c'} icon={<FiCopy size={30} />}/>
-          <SkillItem skill={'Battery charging'} icon={<FiBatteryCharging size={30}/>}/>
-          <SkillItem skill={'Gift giving'} icon={< FiGift size={30}/>}/>
+          {GeneralSkills.map( props => (<SkillItem {...props} />))}
         </SimpleGrid>
         <Heading as='h1' size='xl' marginTop={10} marginBottom={5}>
           Technical Skills
         </Heading>
         <SimpleGrid columns={[2, null, 4]} spacing='40px' >
-          <SkillItem skill={'React.js'} icon={<FaReact size={40} color={colorSwitch('#3182ce','#bee3f8')}/>} bgColor={colorSwitch('blue.100','blue.500')}/>
-          <SkillItem skill={'Javascript'} icon={<DiJavascript1 size={40} color={colorSwitch("#D69E2E",'#FEFCBF')}/>} bgColor={colorSwitch('yellow.100','yellow.500')}/>
-          <SkillItem skill={'Java'} icon={<FaJava size={40} color={colorSwitch('#DD6B20','#FEEBC8')}/>} bgColor={colorSwitch('orange.100', 'orange.500')}/>
-          <SkillItem skill={'Python'} icon={<FaPython size={40} color={colorSwitch('#38A169','#C6F6D5')} />} bgColor={colorSwitch('green.100','green.500')}/>
-          <SkillItem skill={'Web Development'} icon={<GiSpiderWeb size={40} color={colorSwitch('#718096','#EDF2F7')} />} bgColor={colorSwitch('gray.100','gray.500')}/>
-          <SkillItem skill={'Software Engineering'} icon={<GiBigGear size={40} color={colorSwitch('#718096','#EDF2F7')} />} bgColor={colorSwitch('gray.100','gray.500')}/>
-          <SkillItem skill={'Project Management'}  icon={<FiGrid size={40} color={colorSwitch('#718096','#EDF2F7')} />} bgColor={colorSwitch('gray.100','gray.500')}/>
-          <SkillItem skill={'Agile Methodologies'} icon={<FiZap size={40} color={colorSwitch('#718096','#EDF2F7')} />} bgColor={colorSwitch('gray.100','gray.500')}/>
+          {TechnicalSkills().map( props => (<SkillItem {...props} />))}         
         </SimpleGrid>
     </Flex>
   )
