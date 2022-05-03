@@ -54,7 +54,7 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
                   </Button>
                   <Link href={interactiveLink} isExternal>
                     <Button href={interactiveLink} colorScheme='blue' ml={3} onClick={onClose}>
-                      Interactive Sandbox <ExternalLinkIcon mx='2px' />
+                      External Page <ExternalLinkIcon mx='2px' />
                     </Button>
                   </Link>
                 </AlertDialogFooter>
