@@ -1,6 +1,6 @@
 import { Text, Flex, Heading, HStack} from '@chakra-ui/react';
 
-const SchoolMarker = ({ school, dateRange, location, degree, conc1, conc2}) => {
+const SchoolMarker = ({ school, dateRange, location, degree, degree1Area, degree1Conc, degree2, degree2Area, degree2Conc}) => {
     return (      
     <Flex direction={'column'} align={'flex-start'} justify={'flex-start'} >
         <Flex align={'center'} width='850px' justify={'space-between'}>
@@ -10,10 +10,12 @@ const SchoolMarker = ({ school, dateRange, location, degree, conc1, conc2}) => {
             </HStack>
             <Text fontSize='xl'>{ dateRange }</Text>
         </Flex>
-        <Heading as='h6' size='md' marginTop={4}>{ degree }</Heading>
-        <Text fontSize='lg'>{ conc1 }</Text>
-        {conc2 && <Heading as='h6' size='md' marginTop={4}>{ degree }</Heading>}
-        <Text fontSize='lg'>{ conc2 }</Text>
+        {degree && <Heading as='h6' size='md' marginTop={4}>{ degree }</Heading>}
+        {degree && <Text fontSize='lg'>{ degree1Area }</Text>}
+        {degree1Conc && <Text fontSize='md' fontStyle={'italic'}>{ degree1Conc }</Text>}
+        {degree2 && <Heading as='h6' size='md' marginTop={4}>{ degree2 }</Heading>}
+        {degree2 &&  <Text fontSize='lg'>{ degree2Area }</Text>}
+        {degree2Conc && <Text fontSize='sm' fontStyle={'italic'}>Focus: { degree2Conc }</Text>}
     </Flex>
     )
 }
@@ -26,8 +28,9 @@ const Education = () => {
         <Heading as='h1' size='3xl'>
             Education
         </Heading>
-        <SchoolMarker school={'Ball State University (BSU)'} dateRange={'AUG 2018 - MAY 2022'} location={'Muncie, IN'} degree={'Bachelor of the Arts'} conc1={'Computer Science'} conc2={'Video Production'}/>
-        <SchoolMarker school={'West Ottawa High School (WOHS)'} dateRange={'AUG 2014 - MAY 2018'} location={'Holland, MI'} degree={'G.E.D.'}/>
+        <SchoolMarker school={'Ball State University (BSU)'} dateRange={'AUG 2018 - MAY 2022'} location={'Muncie, IN'} 
+                      degree={'Bachelor of the Arts'} degree1Area={'Computer Science'} degree2={'Bachelor of the Arts'} 
+                      degree2Area={'Telecommunications'} degree2Conc={'Digital Production/Digital Video'}/>
     </Flex>
   )
 }

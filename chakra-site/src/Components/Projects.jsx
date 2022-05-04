@@ -139,7 +139,7 @@ const Projects = () => {
             <ProjectItem {...props} key={index}/>
           )
         })} */}
-        <Pagination data={filteredProjects} RenderComponent={ProjectItem} pageLimit={Math.ceil(filteredProjects.length/6)} dataLimit={6}/>
+        <Pagination data={filteredProjects} RenderComponent={ProjectItem} pageLimit={Math.ceil(filteredProjects.length/5)} dataLimit={5}/>
     </Flex>
   )
 }

@@ -1,19 +1,4 @@
-import {
-    Text,
-    Link,
-    Flex,
-    Heading,
-    HStack,
-    IconButton,
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-    PopoverHeader,
-    PopoverBody,
-    Tooltip,
-    Circle,
-    useColorModeValue
-  } from '@chakra-ui/react';
+import { Text, Link, Flex, Heading, HStack, IconButton, Popover, PopoverContent, PopoverTrigger, PopoverHeader, PopoverBody, Tooltip, Circle, useColorModeValue } from '@chakra-ui/react';
 import { AiOutlineMail, AiOutlineSmile } from 'react-icons/ai'
 import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram, FaLocationArrow, FaStore} from 'react-icons/fa'
 
@@ -69,10 +54,10 @@ const About = () => {
             Duncan Klemm
         </Heading>
         <Text marginTop={'30px'} fontSize='2xl'>
-            Software Engineer | Computer Scientist | Motion Graphics Artist
+            Software Engineer | Game Designer | Motion Graphics Artist
         </Text>
         <Text marginTop={'30px'}>
-            Current student at Ball State University in Muncie, Indiana. My goal for life is to use my abilities and collaborate with others to make the world a better place.
+            My goal for life is to use my abilities and collaborate with others to make the world a better place.
         </Text>
         <HStack marginTop={10} gap={2}>
             <SocialIcon link={'https://www.linkedin.com/in/duncan-klemm-506320190/'} label={"LinkedIn"} ariaLabel={'LinkedIn link'} icon={<FaLinkedinIn />}/>

@@ -1,12 +1,4 @@
-import {
-  ChakraProvider,
-  Box,
-  Link,
-  VStack,
-  Circle,
-  theme,
-  Flex,
-  Divider,} from '@chakra-ui/react';
+import { ChakraProvider, Box, Link, VStack, Circle, theme, Flex, Divider,} from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../HOC/ColorModeSwitcher';
 import { AiOutlineFilePdf } from 'react-icons/ai'
 import About from '../Components/About';
@@ -17,6 +9,7 @@ import Projects from '../Components/Projects';
 import Learning from '../Components/Learning';
 import Contact from '../Components/Contact';
 import { ColorModeProfile } from '../HOC/ColorModeProfile';
+import Footer from '../Components/Footer';
 
 function App() {
 
@@ -48,6 +41,7 @@ function App() {
           <Projects />
           <Learning />
           <Contact />
+          <Footer />
         </Box>
       </Flex>
     </ChakraProvider>
