@@ -1,14 +1,16 @@
 import '../Styles/projects.css'
-import { Flex, Heading, HStack, Text, Link, useColorMode, Circle, AlertDialog, Button, AlertDialogBody, AlertDialogFooter, AlertDialogHeader, AlertDialogContent, AlertDialogOverlay, useDisclosure, Switch} from '@chakra-ui/react';
+import { Flex, Heading, HStack, Text, Link, useColorMode, useColorModeValue, Circle, AlertDialog, Button, AlertDialogBody, AlertDialogFooter, AlertDialogHeader, AlertDialogContent, AlertDialogOverlay, useDisclosure, Switch} from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FiChevronRight } from 'react-icons/fi'
 import { projectsInfo, badgeOptions } from '../Documents/projectsInfo';
 import Select from 'react-select';
+import Pagination from '../HOC/Pagination';
 
-const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, color, hasDescLink, descLink, hasInteractive, interactiveLink}) => {
+const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, hasDescLink, descLink, hasInteractive, interactiveLink}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const linkColor = useColorModeValue('blue.600', 'blue.400');
   return (
     <Flex flexDirection={'column'} marginBottom='30px' align={'flex-start'} >
       <HStack>
@@ -22,13 +24,13 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
       </Text>
       <Flex gap={5}>
         <Text fontSize={'xl'}>
-          {desc}{hasDescLink ? <Link href={descLink.link} isExternal fontSize={'lg'} color={color === 'light' ? 'blue.600' : 'blue.400'}>{descLink.name}</Link> : ''}
+          {desc}{hasDescLink ? <Link href={descLink.link} isExternal fontSize={'lg'} color={linkColor}>{descLink.name}</Link> : ''}
         </Text>
-        {hasRepo && <Link href={repoLink} isExternal display={'flex'} gap={2} fontSize={'sm'} color={color === 'light' ? 'blue.600' : 'blue.400'}>
+        {hasRepo && <Link href={repoLink} isExternal display={'flex'} gap={2} fontSize={'sm'} color={linkColor}>
           Github Repo <FaGithub mx='2px' />
         </Link>}
         {hasInteractive && <>
-          <Link onClick={onOpen} isExternal display={'flex'} gap={2} justify='flex-end' fontSize={'sm'} color={color === 'light' ? 'blue.600' : 'blue.400'}>
+          <Link onClick={onOpen} isExternal display={'flex'} gap={2} justify='flex-end' fontSize={'sm'} color={linkColor}>
             Try it out
             <Circle size='20px' outline={'1px solid currentColor'}>
               <FiChevronRight mx='2px' />
@@ -106,8 +108,8 @@ const Projects = () => {
 
 
   return (
-    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'130%'} marginLeft={10} >
-        <Flex id='projects' marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={5}>
+    <Flex id='projects' flexDirection={'column'} justify={'flex-start'} align={'flex-start'} h={'100%'} marginLeft={10} marginBottom={0} paddingTop={10}>
+        <Flex marginBottom={10} w={'60%'} justify='space-between' align='flex-end' gap={5}>
           <Heading as='h1' size='3xl'>
               Projects
           </Heading>
@@ -132,11 +134,12 @@ const Projects = () => {
             Intersection Search
           </Text>
         </Flex>
-        {filteredProjects.map( (props, index) => {
+        {/* {filteredProjects.map( (props, index) => {
           return (
-            <ProjectItem {...props} key={index} color={colorMode}/>
+            <ProjectItem {...props} key={index}/>
           )
-        })}
+        })} */}
+        <Pagination data={filteredProjects} RenderComponent={ProjectItem} pageLimit={Math.ceil(filteredProjects.length/6)} dataLimit={6}/>
     </Flex>
   )
 }

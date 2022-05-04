@@ -34,9 +34,7 @@ const Learning = () => {
                                                                             Are you kidding me??  *chef's kiss*  Perfection."/>
         <LearningItem title={'Node.js'} href={'https://nodejs.org/en/'} desc='Node.js is an open-source, cross-platform, back-end JavaScript runtime environment 
                                                                               that runs on the V8 engine and executes JavaScript code outside a web browser. My
-                                                                              goal with learning Node is to ultimately build a lean, mean, request processing 
-                                                                              machine and host my own server. Alternatively, I will open an Inmotion
-                                                                              account.' />
+                                                                              goal with learning Node is to ultimately build lean and mean REST machines.' />
         <LearningItem title={'Go'} href={'https://go.dev/'} desc="Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, 
                                                                   Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage 
                                                                   collection, structural typing, and CSP-style concurrency. I am excited to be learning Go because 

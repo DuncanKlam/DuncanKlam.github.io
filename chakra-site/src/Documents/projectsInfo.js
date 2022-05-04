@@ -26,7 +26,7 @@ export const projectsInfo = [
     {
         "title": "Apex Legends Stats Dashboard",
         "badgeArray": [ sideProject, ongoing, react, chakra, javascript],
-        "date": 'April 2022',
+        "date": 'April 2022 - present',
         "desc": "A dashboard that displays data based on the trackers that are equipped to your current legend.",
         "repoLink": 'https://github.com/DuncanKlam/Apex-Legends-Stats-Dashboard',
         "hasDescLink": false,
@@ -71,7 +71,7 @@ export const projectsInfo = [
         "title": "Escape",
         "badgeArray": [ godot ],
         "date": "October 2021 - November 2021",
-        "desc": "A short game where a small guy jumps around.",
+        "desc": "Another short game where a small guy jumps around.",
         "hasDescLink": false,
         "hasRepo": false,
         'hasInteractive' : true,

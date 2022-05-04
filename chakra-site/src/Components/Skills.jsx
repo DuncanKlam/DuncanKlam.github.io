@@ -77,7 +77,7 @@ const SkillItem = ({ icon, skill, bgColor = 'blackAlpha.100', proficiency = 0, e
 const Skills = () => {
 
   return (
-    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'105%'} w={'95%'} marginLeft={10} id='skills'>
+    <Flex  flexDirection={'column'} justify={'center'} align={'flex-start'} h={'105%'} w={'95%'} marginLeft={10} id='skills' marginBottom={40}>
         <Heading as='h1' size='3xl'>
           Skills
         </Heading>
