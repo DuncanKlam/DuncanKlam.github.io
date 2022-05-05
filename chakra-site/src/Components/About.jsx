@@ -66,8 +66,8 @@ const About = () => {
             <SocialIcon link={'https://www.instagram.com/klemmchowdah/'} label={'Instagram'} ariaLabel={'Instagram link'} icon={<FaInstagram />}/>
             <SocialIcon link={'mailto:duncan.klemm141@gmail.com'} label={'Email'} ariaLabel={'Email link'} icon={<AiOutlineMail fill='currentColor'/>}/>
             <SocialIcon link={'https://duncanklam.itch.io/'} label={'Itch.io'} ariaLabel={'itch dot i o link'} icon={<FaStore />}/>
-            <SocialPopover label={'Location'} icon={<FaLocationArrow size={17}/>} header={'Current Location:'} body={'Muncie, Indiana (Go Cardinals!)'}/>
-            <SocialPopover label={'Smiley Face'} icon={<AiOutlineSmile size={25}/>} header={'Smiley Face:'} body={'You clicked on the smiley face! Have some '} link={'https://www.piday.org/million/#million_pi'} linkLabel={'pie.'}/>
+            {/* <SocialPopover label={'Location'} icon={<FaLocationArrow size={17}/>} header={'Current Location:'} body={'Muncie, Indiana (Go Cardinals!)'}/>
+            <SocialPopover label={'Smiley Face'} icon={<AiOutlineSmile size={25}/>} header={'Smiley Face:'} body={'You clicked on the smiley face! Have some '} link={'https://www.piday.org/million/#million_pi'} linkLabel={'pie.'}/> */}
         </HStack>
     </Flex>
   )
