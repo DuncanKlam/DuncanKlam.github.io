@@ -1,7 +1,7 @@
 import { Badge } from '@chakra-ui/react';
 
 const shell = <Badge colorScheme='black' key='shl'>Shell</Badge>
-const markdown = <Badge colorScheme={'gray'} key='md' >Markdown</Badge>
+const google = <Badge colorScheme={'gray'} key='glf'>Google Cloud Platform</Badge>
 const godot = <Badge colorScheme={'red'} key='gdt'>Godot</Badge>
 const java = <Badge colorScheme='orange' key='jav'>Java</Badge>
 const ongoing = <Badge colorScheme={'yellow'} key='ong'>Ongoing</Badge>
@@ -13,6 +13,17 @@ const sideProject = <Badge colorScheme='purple' key='sdp'>Side Project</Badge>
 const python = <Badge colorScheme={'pink'} key='pyt'>Python</Badge>
 
 export const projectsInfo = [
+    {
+        "title": "NBA Season Leader Stats Twitter Bot",
+        "badgeArray" : [sideProject, ongoing, python, google],
+        "date" : "May 2022 - present",
+        "desc" : "A python script that retrieves random high-ranking player data from NBA.com and tweets it out on a semi-regular basis.",
+        "hasRepo" : true,
+        "repoLink" : "https://github.com/DuncanKlam/NBASeasonLeadersTwitterBot",
+        "hasDescLink" : false,
+        'hasInteractive' : true,
+        "interactiveLink" : "https://twitter.com/LeadersSeason"
+    },
     {
         "title": "This Website",
         "badgeArray": [ sideProject, ongoing, react, chakra, javascript ],
@@ -49,22 +60,13 @@ export const projectsInfo = [
         "badgeArray": [ group, react, javascript] ,
         "date": 'September 2021 - April 2022',
         "desc": "The individual player version of ",
-        "hasRepo": false,
+        "hasRepo": true,
+        "repoLink": 'https://github.com/DuncanKlam/FullCourtAnalytics',
         "hasDescLink": true,
         "descLink": {
             link: 'https://fullcourtanalytics.com/',
             name: 'fullcourtanalytics.com'
         },
-        'hasInteractive' : false,
-    },
-    {
-        "title": "Full Court Analytics",
-        "badgeArray": [ group, markdown ],
-        "date": 'September 2021 - April 2022',
-        "desc": "The side documentation for the Full Court Analytics Player Site.",
-        "repoLink": 'https://github.com/DuncanKlam/FullCourtAnalytics',
-        "hasDescLink": false,
-        "hasRepo": true,
         'hasInteractive' : false,
     },
     {
@@ -139,6 +141,9 @@ export const badgeOptions = [
                 value: 'chakra', label: 'Chakra', badge: chakra, colorMain: '#276749',  colorAlt: '#68D391' //green.700 && green.300
             },
             {
+                value: 'google', label: 'Google Cloud Platform', badge: google, colorMain: '#4A5568', colorAlt: '#EDF2F7' //gray.700 && gray.300
+            },
+            {
                 value: 'react', label: 'React', badge: react, colorMain: '#0987A0', colorAlt: '#76E4F7' //cyan.700 && cyan.300
             },
         ]
@@ -154,9 +159,6 @@ export const badgeOptions = [
             },
             {
                 value: 'javascript', label: 'Javascript', badge: javascript, colorMain: '#2c5282', colorAlt: '#63b3ed' //blue.700 && blue.300
-            },
-            {
-                value: 'markdown', label: 'Markdown', badge: markdown, colorMain: '#4A5568', colorAlt: '#EDF2F7' //gray.700 && gray.300
             },
             {
                 value: 'python', label: 'Python', badge: python, colorMain: '#97266D', colorAlt: '#FBB6CE' //pink.700 && pink.300

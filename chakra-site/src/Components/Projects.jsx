@@ -22,8 +22,8 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
       <Text fontStyle={'italic'} fontSize='sm'>
         {date}
       </Text>
-      <Flex gap={5}>
-        <Text fontSize={'xl'}>
+      <Flex gap={5} >
+        <Text fontSize={'xl'} w={840} textAlign='start' >
           {desc}{hasDescLink ? <Link href={descLink.link} isExternal fontSize={'lg'} color={linkColor}>{descLink.name}</Link> : ''}
         </Text>
         {hasRepo && <Link href={repoLink} isExternal display={'flex'} gap={2} fontSize={'sm'} color={linkColor}>
@@ -47,7 +47,7 @@ const ProjectItem = ({ title, badgeArray, date, desc, hasRepo = true, repoLink, 
                 </AlertDialogHeader>
     
                 <AlertDialogBody>
-                  You may be faced with a blank screen for a minute, allow for extended loading time.
+                  You may be faced with a blank screen for a minute, please allow for extended loading time.
                 </AlertDialogBody>
     
                 <AlertDialogFooter>
