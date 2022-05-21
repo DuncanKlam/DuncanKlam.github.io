@@ -37,7 +37,7 @@ const SkillItem = ({ icon, skill, bgColor = 'blackAlpha.100', proficiency = 0, e
 
   return (
     <>
-      <Flex height='80px' w={'340px'} align={'center'} outline={'1px solid gray'} padding={8} borderRadius={10} onClick={onOpen}>
+      <Flex height='80px' w={'18vw'} align={'center'} outline={'1px solid gray'} padding={8} borderRadius={10} onClick={onOpen}>
         <Circle size='60px' bg={bgColor} marginRight={5}>
           {icon}
         </Circle>

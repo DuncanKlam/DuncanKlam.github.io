@@ -31,7 +31,7 @@ const Education = () => {
         <SchoolMarker school={'Ball State University (BSU)'} dateRange={'AUG 2018 - MAY 2022'} location={'Muncie, IN'} 
                       degree={'Bachelor of the Arts'} degree1Area={'Computer Science'} degree2={'Bachelor of the Arts'} 
                       degree2Area={'Telecommunications'} degree2Conc={'Digital Production/Digital Video'}/>
-        <SchoolMarker school={'West Ottawa High School (WOHS)'} dateRange={'MAY 2014 - AUG 2018'} location={"Holland, MI"} degree={"G.E.D"}/>
+        <SchoolMarker school={'West Ottawa High School (WOHS)'} dateRange={'AUG 2014 - MAY 2018'} location={"Holland, MI"} degree={"G.E.D"}/>
     </Flex>
   )
 }
